@@ -4,10 +4,96 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     tools:context=".BaseActivity">
 
+    <!--活动标题栏-->
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_green">
+        <!--点击则关闭活动-->
+        <RelativeLayout
+            android:id="@+id/title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_title_left"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/title_back" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/img_title_right"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/title_right_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/title_right">
+            <ImageView
+                android:id="@+id/img_title_right_sub"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!--设置活动标题-->
+        <RelativeLayout
+            android:id="@+id/title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/title_right"
+            android:layout_toRightOf="@id/title_left">
+            <View
+                android:id="@+id/space_line"
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:background="@color/color_white" />
+            <TextView
+                android:id="@+id/txt_title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/space_line"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--位于指定视图的下面-->
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar">
+    </FrameLayout>
 </RelativeLayout>

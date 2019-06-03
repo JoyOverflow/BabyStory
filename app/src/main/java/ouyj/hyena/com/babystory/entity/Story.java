@@ -10,6 +10,9 @@ public class Story {
     private String content;
     private String count;
 
+    //增加文件名,图片,书ID
+
+
     public Story() { }
 
     public int getId() {

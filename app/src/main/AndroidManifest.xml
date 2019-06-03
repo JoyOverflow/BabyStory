@@ -12,15 +12,14 @@
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".StoriesActivity">
+        <activity android:name=".StoriesActivity" android:theme="@style/AppTheme2">
         </activity>
         <activity android:name=".DetailActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:theme="@style/AppTheme2">
         </activity>
         <activity android:name=".BaseActivity">
         </activity>

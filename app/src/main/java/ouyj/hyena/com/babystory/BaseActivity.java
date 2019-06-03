@@ -3,6 +3,7 @@ package ouyj.hyena.com.babystory;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -108,7 +109,11 @@ public class BaseActivity extends AppCompatActivity {
                     ContextCompat.getColor(this, R.color.color_green)
             );
 
-            getSupportActionBar().hide();
+            //如果有动作条将其隐藏（如果主题为NoActionBar则活动无动作条）
+            ActionBar bar = getSupportActionBar();
+            if(bar!=null){
+                bar.hide();
+            }
         }
     }
 

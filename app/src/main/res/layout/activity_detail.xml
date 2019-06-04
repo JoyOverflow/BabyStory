@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
-
 
     <RelativeLayout
         android:id="@+id/layout_play"
@@ -26,6 +24,7 @@
                 android:id="@+id/img_pause"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:contentDescription="@string/pause"
                 android:src="@drawable/pause" />
             <ImageView
                 android:id="@+id/img_play"
@@ -33,18 +32,20 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:contentDescription="@string/play"
                 android:src="@drawable/play" />
             <ImageView
                 android:id="@+id/img_stop"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:contentDescription="@string/stop"
                 android:src="@drawable/stop" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/img_select"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
@@ -60,7 +61,7 @@
         android:background="@color/color_white"
         android:layout_alignParentTop="true">
         <TextView
-            android:id="@+id/textView_content"
+            android:id="@+id/txt_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="4dp"

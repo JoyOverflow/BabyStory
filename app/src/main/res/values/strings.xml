@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">小奶娃故事书</string>
     <string name="app_title">小奶娃的睡前故事书</string>
+
+
+    <string name="pause">暂停</string>
+    <string name="play">播放</string>
+    <string name="stop">停止</string>
+
 </resources>

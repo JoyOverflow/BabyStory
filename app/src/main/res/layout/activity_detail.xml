@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
+    <!--位于父视图的底部-->
     <RelativeLayout
         android:id="@+id/layout_play"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#a5000000">
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,6 @@
                 android:contentDescription="@string/stop"
                 android:src="@drawable/stop" />
         </LinearLayout>
-
         <ImageView
             android:id="@+id/img_select"
             android:layout_width="40dp"
@@ -52,12 +51,22 @@
             android:src="@drawable/select" />
     </RelativeLayout>
 
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_play"
+        />
     <!--放置在指定视图之上-->
     <ScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/layout_play"
+        android:layout_above="@id/seekBar"
         android:background="@color/color_white"
         android:layout_alignParentTop="true">
         <TextView
